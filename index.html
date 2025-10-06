@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Soldiers vs. Armies</title>
+  <style>
+    body {
+      background: #1f1f1f;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #gameArea {
+      position: relative;
+      margin: 24px 0;
+      border: 3px solid #666;
+      background: #222;
+      width: 720px;
+      height: 360px;
+    }
+    #ui {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 16px;
+    }
+    .button {
+      background: #222;
+      color: #fff;
+      border: 1px solid #888;
+      padding: 8px 18px;
+      margin: 0 4px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.2s;
+    }
+    .button:hover {
+      background: #333;
+    }
+    #soldiersBar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .soldier-card {
+      background: #2d2d2d;
+      border: 1px solid #555;
+      padding: 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .soldier-card.selected {
+      border-color: #0ff;
+      background: #234;
+    }
+    #info {
+      margin-top: 14px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Soldiers vs. Armies</h1>
+  <div id="ui">
+    <div>
+      <strong>Coins:</strong> <span id="coins">100</span>
+      &nbsp;|&nbsp; <strong>Wave:</strong> <span id="waveNum">1</span>
+      &nbsp;|&nbsp; <strong>Rebirths:</strong> <span id="rebirths">0</span>
+      &nbsp;|&nbsp; <strong>Bonus:</strong> <span id="rebirthBonus">0%</span>
+    </div>
+    <button id="rebirthBtn" class="button">Rebirth</button>
+  </div>
+  <div id="soldiersBar"></div>
+  <div id="gameArea"></div>
+  <div id="info"></div>
+  <script src="game.js"></script>
+</body>
+</html>
