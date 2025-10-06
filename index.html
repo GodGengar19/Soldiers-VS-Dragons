@@ -43,6 +43,8 @@
       display: flex;
       gap: 10px;
       margin-bottom: 10px;
+      flex-wrap: wrap;
+      max-width: 720px;
     }
     .soldier-card {
       background: #2d2d2d;
@@ -53,6 +55,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 120px;
+      margin: 2px;
     }
     .soldier-card.selected {
       border-color: #0ff;
@@ -62,6 +66,18 @@
       margin-top: 14px;
       font-size: 18px;
     }
+    .rarity {
+      font-size: 11px;
+      font-weight: bold;
+      padding: 2px 6px;
+      border-radius: 6px;
+      margin-left: 6px;
+    }
+    .common { background: #444; color: #ddd; }
+    .rare { background: #2567d6; color: #fff; }
+    .epic { background: #a020f0; color: #fff; }
+    .legendary { background: #ffb700; color: #fff; }
+    .mythic { background: #e51c23; color: #fff; }
   </style>
 </head>
 <body>
@@ -72,6 +88,7 @@
       &nbsp;|&nbsp; <strong>Wave:</strong> <span id="waveNum">1</span>
       &nbsp;|&nbsp; <strong>Rebirths:</strong> <span id="rebirths">0</span>
       &nbsp;|&nbsp; <strong>Bonus:</strong> <span id="rebirthBonus">0%</span>
+      &nbsp;|&nbsp; <strong>Luck:</strong> <span id="luckMult">1x</span>
     </div>
     <button id="rebirthBtn" class="button">Rebirth</button>
   </div>
